@@ -1,1 +1,1 @@
-# StudyBuddyFinal
+# StudyBuddy
