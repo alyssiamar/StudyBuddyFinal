@@ -1,45 +1,46 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS
+from flask_cors import CORS  # Import CORS
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS so React can communicate with Flask API
-
-# Flask app configuration (replace with your actual database URI)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///study_buddy.db'  # SQLite DB, change if needed
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-# Initialize the database
 db = SQLAlchemy(app)
+CORS(app)  # Enable CORS for all routes
 
-# Define the User model
+# User model for the database
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(100), unique=True, nullable=False)
-    password = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    password = db.Column(db.String(120), nullable=False)
 
-# Ensure you are inside the application context when creating the tables
+# Create the database tables with app context
 with app.app_context():
-    db.create_all()  # Create all tables in the database
+    db.create_all()
 
-# Define the signup route
+# Sign up route
 @app.route('/api/signup', methods=['POST'])
-def signup():
-    # Get data from request
+def sign_up():
     data = request.get_json()
-    username = data.get('username')
+
+    email = data.get('email')
     password = data.get('password')
 
-    if not username or not password:
-        return jsonify({'message': 'Missing username or password'}), 400
+    if not email or not password:
+        return jsonify({"message": "Email and password are required!"}), 400
 
-    # Create a new user and add to database
-    new_user = User(username=username, password=password)
+    # Check if user already exists
+    existing_user = User.query.filter_by(email=email).first()
+    if existing_user:
+        return jsonify({"message": "User already exists!"}), 400
+
+    # Create new user
+    new_user = User(email=email, password=password)
     db.session.add(new_user)
     db.session.commit()
 
-    return jsonify({'message': 'User created successfully!'}), 201
+    return jsonify({"message": "User registered successfully!"}), 201
 
-# Run the Flask app
-if __name__ == "__main__":
+# Run the app
+if __name__ == '__main__':
     app.run(debug=True)
