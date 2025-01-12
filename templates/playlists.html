@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Playlists</title>
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .playlist {
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Spotify Playlists</h1>
+  <div>
+    {% for playlist in playlists %}
+    <div class="playlist">
+      <h3>{{ playlist.name }}</h3>
+      {% if playlist.images %}
+      <img src="{{ playlist.images[0].url }}" alt="{{ playlist.name }}" width="200">
+      {% endif %}
+      <div>
+        <button class="play-button" data-uri="{{ playlist.uri }}">Play</button>
+        <button class="pause-button">Pause</button>
+        <button class="next-button">Next</button>
+        <button class="previous-button">Previous</button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <script>
+    fetch("/token")
+      .then(response => response.json())
+      .then(data => {
+        const token = data.access_token;
+
+        window.onSpotifyWebPlaybackSDKReady = () => {
+          const player = new Spotify.Player({
+            name: "Spotify Web Player",
+            getOAuthToken: cb => { cb(token); },
+            volume: 0.5
+          });
+
+          player.connect().then(success => {
+            if (success) {
+              console.log("Spotify Web Player connected!");
+            }
+          });
+
+          document.querySelectorAll(".play-button").forEach(button => {
+            button.addEventListener("click", () => {
+              const uri = button.getAttribute("data-uri");
+              player._options.getOAuthToken(accessToken => {
+                fetch("https://api.spotify.com/v1/me/player/play", {
+                  method: "PUT",
+                  body: JSON.stringify({ context_uri: uri }),
+                  headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${accessToken}`
+                  }
+                });
+              });
+            });
+          });
+
+          document.querySelectorAll(".pause-button").forEach(button => {
+            button.addEventListener("click", () => {
+              player.pause();
+            });
+          });
+
+          document.querySelectorAll(".next-button").forEach(button => {
+            button.addEventListener("click", () => {
+              player.nextTrack();
+            });
+          });
+
+          document.querySelectorAll(".previous-button").forEach(button => {
+            button.addEventListener("click", () => {
+              player.previousTrack();
+            });
+          });
+        };
+      })
+      .catch(error => {
+        console.error("Error fetching token:", error);
+      });
+  </script>
+</body>
+</html>
