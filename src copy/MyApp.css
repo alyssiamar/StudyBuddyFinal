@@ -8,8 +8,45 @@
     padding: 2rem;
     width: 60%;
   }
-  
-  .chatbot {
-    margin-left: auto;
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
   }
+  
+  /* .chatbot {
+    margin-left: auto;
+  } */
+
+  .homepage-container {
+    height: 100vh; /* Make it cover the full viewport height */
+    width: 100vw; /* Make it cover the full viewport width */
+    
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  .app-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    background-size: cover;
+    background-image: url("./assets/bg4.png"); /* Path to the image */
+    background-size: cover; /* Ensure it stretches to cover the full screen */
+    background-position: center; 
+    background-repeat: no-repeat; /* Prevent repeating */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    overflow: hidden;
+  }
+  
+  .main-content {
+    flex: 1;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+  }
+  
+  
   

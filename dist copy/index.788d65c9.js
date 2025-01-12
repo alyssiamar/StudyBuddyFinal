@@ -27262,8 +27262,6 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _sidebar = require("./components/Sidebar");
 var _sidebarDefault = parcelHelpers.interopDefault(_sidebar);
-var _chatbot = require("./components/Chatbot"); // Only for the homepage
-var _chatbotDefault = parcelHelpers.interopDefault(_chatbot);
 var _studyMusic = require("./components/StudyMusic");
 var _studyMusicDefault = parcelHelpers.interopDefault(_studyMusic);
 var _studyRoom = require("./components/StudyRoom");
@@ -27278,82 +27276,78 @@ function MyApp() {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarDefault.default), {}, void 0, false, {
                     fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                    lineNumber: 39,
+                    lineNumber: 64,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "main-content",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homePageDefault.default), {}, void 0, false, {
-                                            fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                                            lineNumber: 47,
-                                            columnNumber: 19
-                                        }, void 0),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatbotDefault.default), {}, void 0, false, {
-                                            fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                                            lineNumber: 48,
-                                            columnNumber: 19
-                                        }, void 0)
-                                    ]
-                                }, void 0, true, {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "homepage-container",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                    path: "/",
+                                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                        children: "Welcome to the Study App!"
+                                    }, void 0, false, {
+                                        fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
+                                        lineNumber: 68,
+                                        columnNumber: 40
+                                    }, void 0)
+                                }, void 0, false, {
                                     fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                                    lineNumber: 46,
-                                    columnNumber: 17
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                                lineNumber: 43,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/playlists",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyMusicDefault.default), {}, void 0, false, {
+                                    lineNumber: 68,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                    path: "/playlists",
+                                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyMusicDefault.default), {}, void 0, false, {
+                                        fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
+                                        lineNumber: 69,
+                                        columnNumber: 49
+                                    }, void 0)
+                                }, void 0, false, {
                                     fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                                    lineNumber: 53,
-                                    columnNumber: 47
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                                lineNumber: 53,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/rooms",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyRoomDefault.default), {}, void 0, false, {
+                                    lineNumber: 69,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                    path: "/rooms",
+                                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyRoomDefault.default), {}, void 0, false, {
+                                        fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
+                                        lineNumber: 70,
+                                        columnNumber: 45
+                                    }, void 0)
+                                }, void 0, false, {
                                     fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                                    lineNumber: 55,
-                                    columnNumber: 43
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                                lineNumber: 55,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                                    lineNumber: 70,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
+                            lineNumber: 67,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
                         fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                        lineNumber: 41,
+                        lineNumber: 66,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-                    lineNumber: 40,
+                    lineNumber: 65,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-            lineNumber: 38,
+            lineNumber: 63,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "Downloads/StudyBuddy copy/src/MyApp.js",
-        lineNumber: 37,
+        lineNumber: 62,
         columnNumber: 5
     }, this);
 }
@@ -27366,7 +27360,7 @@ $RefreshReg$(_c, "MyApp");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"9Xk2c","react":"hnjqo","react-router-dom":"bzuUY","./components/Sidebar":"aBHe9","./components/Chatbot":"cWSjp","./components/StudyMusic":"jgltZ","./components/StudyRoom":"7NfQa","./components/HomePage":"blHZv","./MyApp.css":"bhDsA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bzuUY":[function(require,module,exports,__globalThis) {
+},{"react":"hnjqo","react-router-dom":"bzuUY","./components/Sidebar":"aBHe9","./components/StudyMusic":"jgltZ","./components/StudyRoom":"7NfQa","./components/HomePage":"blHZv","./MyApp.css":"bhDsA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"9Xk2c"}],"bzuUY":[function(require,module,exports,__globalThis) {
 /**
  * React Router DOM v6.28.1
  *
@@ -34621,66 +34615,57 @@ var _sidebarCss = require("../styles/Sidebar.css");
 function Sidebar() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "sidebar",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Menu"
-            }, void 0, false, {
-                fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/",
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
-                            lineNumber: 11,
-                            columnNumber: 11
-                        }, this)
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/",
+                        children: "Home"
                     }, void 0, false, {
                         fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
                         lineNumber: 10,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/playlists",
-                            children: "Study Music"
-                        }, void 0, false, {
-                            fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
-                            lineNumber: 14,
-                            columnNumber: 11
-                        }, this)
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/playlists",
+                        children: "Study Music"
                     }, void 0, false, {
                         fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
                         lineNumber: 13,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/rooms",
-                            children: "Study Room"
-                        }, void 0, false, {
-                            fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, this)
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/rooms",
+                        children: "Study Room"
                     }, void 0, false, {
                         fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
                         lineNumber: 16,
-                        columnNumber: 9
+                        columnNumber: 11
                     }, this)
-                ]
-            }, void 0, true, {
-                fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
+                    lineNumber: 15,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "Downloads/StudyBuddy copy/src/components/Sidebar.js",
         lineNumber: 7,
         columnNumber: 5
@@ -34840,111 +34825,7 @@ function registerExportsForReactRefresh(module1) {
 },{"7422ead32dcc1e6b":"786KC","630b62916b1ae0e7":"4SQxb"}],"4SQxb":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"name\":\"react-refresh\",\"description\":\"React is a JavaScript library for building user interfaces.\",\"keywords\":[\"react\"],\"version\":\"0.14.2\",\"homepage\":\"https://reactjs.org/\",\"bugs\":\"https://github.com/facebook/react/issues\",\"license\":\"MIT\",\"files\":[\"LICENSE\",\"README.md\",\"babel.js\",\"runtime.js\",\"cjs/\",\"umd/\"],\"main\":\"runtime.js\",\"exports\":{\".\":\"./runtime.js\",\"./runtime\":\"./runtime.js\",\"./babel\":\"./babel.js\",\"./package.json\":\"./package.json\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/facebook/react.git\",\"directory\":\"packages/react\"},\"engines\":{\"node\":\">=0.10.0\"},\"devDependencies\":{\"react-16-8\":\"npm:react@16.8.0\",\"react-dom-16-8\":\"npm:react-dom@16.8.0\",\"scheduler-0-13\":\"npm:scheduler@0.13.0\"}}");
 
-},{}],"cWSjp":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$ea6e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ea6e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>Chatbot);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _chatbotCss = require("../styles/Chatbot.css");
-var _s = $RefreshSig$();
-function Chatbot() {
-    _s();
-    const [messages, setMessages] = (0, _react.useState)([]);
-    const [input, setInput] = (0, _react.useState)('');
-    const sendMessage = ()=>{
-        if (input.trim()) {
-            setMessages([
-                ...messages,
-                {
-                    sender: 'user',
-                    text: input
-                },
-                {
-                    sender: 'bot',
-                    text: 'Hello! How can I help?'
-                }
-            ]);
-            setInput('');
-        }
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "chatbot",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Chatbot"
-            }, void 0, false, {
-                fileName: "Downloads/StudyBuddy copy/src/components/Chatbot.js",
-                lineNumber: 17,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "chatbox",
-                children: messages.map((msg, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: `message ${msg.sender}`,
-                        children: msg.text
-                    }, i, false, {
-                        fileName: "Downloads/StudyBuddy copy/src/components/Chatbot.js",
-                        lineNumber: 20,
-                        columnNumber: 11
-                    }, this))
-            }, void 0, false, {
-                fileName: "Downloads/StudyBuddy copy/src/components/Chatbot.js",
-                lineNumber: 18,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "input-area",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        value: input,
-                        onChange: (e)=>setInput(e.target.value),
-                        placeholder: "Ask me anything..."
-                    }, void 0, false, {
-                        fileName: "Downloads/StudyBuddy copy/src/components/Chatbot.js",
-                        lineNumber: 24,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: sendMessage,
-                        children: "Send"
-                    }, void 0, false, {
-                        fileName: "Downloads/StudyBuddy copy/src/components/Chatbot.js",
-                        lineNumber: 30,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "Downloads/StudyBuddy copy/src/components/Chatbot.js",
-                lineNumber: 23,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "Downloads/StudyBuddy copy/src/components/Chatbot.js",
-        lineNumber: 16,
-        columnNumber: 5
-    }, this);
-}
-_s(Chatbot, "HDAtGPGcvWga1zf1TBXg51T+tsc=");
-_c = Chatbot;
-var _c;
-$RefreshReg$(_c, "Chatbot");
-
-  $parcel$ReactRefreshHelpers$ea6e.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"9Xk2c","react":"hnjqo","../styles/Chatbot.css":"htLdF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"htLdF":[function() {},{}],"jgltZ":[function(require,module,exports,__globalThis) {
+},{}],"jgltZ":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$df06 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

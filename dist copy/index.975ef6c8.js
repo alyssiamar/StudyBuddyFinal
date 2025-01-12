@@ -2945,14 +2945,6 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$20e5.prelude(module);
 
 try {
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import MyApp from './MyApp';
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <React.StrictMode>
-//     <MyApp />
-//   </React.StrictMode>
-// );
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
@@ -2965,12 +2957,12 @@ const root = (0, _clientDefault.default).createRoot(document.getElementById('roo
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _myAppDefault.default), {}, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 18,
+        lineNumber: 8,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 17,
+    lineNumber: 7,
     columnNumber: 3
 }, undefined));
 
@@ -27229,30 +27221,6 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$cb96.prelude(module);
 
 try {
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Sidebar from './components/Sidebar';
-// import Chatbot from './components/Chatbot';
-// import StudyMusic from './components/StudyMusic';
-// import StudyRoom from './components/StudyRoom';
-// import './MyApp.css';
-// export default function MyApp() {
-//   return (
-//     <Router>
-//       <div className="app-container">
-//         <Sidebar />
-//         <div className="main-content">
-//           <Routes>
-//             <Route path="/" element={<h1>Home Page</h1>} />
-//             <Route path="/playlists" element={<StudyMusic />} />
-//             <Route path="/rooms" element={<StudyRoom />} />
-//           </Routes>
-//         </div>
-//         <Chatbot />
-//       </div>
-//     </Router>
-//   );
-// }
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>MyApp);
@@ -27262,14 +27230,12 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _sidebar = require("./components/Sidebar");
 var _sidebarDefault = parcelHelpers.interopDefault(_sidebar);
-var _chatbot = require("./components/Chatbot"); // Only for the homepage
-var _chatbotDefault = parcelHelpers.interopDefault(_chatbot);
 var _studyMusic = require("./components/StudyMusic");
 var _studyMusicDefault = parcelHelpers.interopDefault(_studyMusic);
 var _studyRoom = require("./components/StudyRoom");
 var _studyRoomDefault = parcelHelpers.interopDefault(_studyRoom);
-var _homePage = require("./components/HomePage"); // Default homepage
-var _homePageDefault = parcelHelpers.interopDefault(_homePage);
+var _toDoList = require("./components/ToDoList");
+var _toDoListDefault = parcelHelpers.interopDefault(_toDoList);
 var _myAppCss = require("./MyApp.css");
 function MyApp() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
@@ -27278,7 +27244,7 @@ function MyApp() {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarDefault.default), {}, void 0, false, {
                     fileName: "src/MyApp.js",
-                    lineNumber: 39,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27288,72 +27254,65 @@ function MyApp() {
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                                 path: "/",
                                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homePageDefault.default), {}, void 0, false, {
-                                            fileName: "src/MyApp.js",
-                                            lineNumber: 47,
-                                            columnNumber: 19
-                                        }, void 0),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _chatbotDefault.default), {}, void 0, false, {
-                                            fileName: "src/MyApp.js",
-                                            lineNumber: 48,
-                                            columnNumber: 19
-                                        }, void 0)
-                                    ]
-                                }, void 0, true, {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {}, void 0, false, {
+                                        fileName: "src/MyApp.js",
+                                        lineNumber: 21,
+                                        columnNumber: 19
+                                    }, void 0)
+                                }, void 0, false, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 46,
+                                    lineNumber: 20,
                                     columnNumber: 17
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 43,
+                                lineNumber: 17,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                                 path: "/playlists",
                                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyMusicDefault.default), {}, void 0, false, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 53,
-                                    columnNumber: 47
+                                    lineNumber: 25,
+                                    columnNumber: 49
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 53,
-                                columnNumber: 13
+                                lineNumber: 25,
+                                columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                                 path: "/rooms",
                                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyRoomDefault.default), {}, void 0, false, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 55,
-                                    columnNumber: 43
+                                    lineNumber: 26,
+                                    columnNumber: 45
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 55,
-                                columnNumber: 13
+                                lineNumber: 26,
+                                columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/MyApp.js",
-                        lineNumber: 41,
-                        columnNumber: 11
+                        lineNumber: 16,
+                        columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "src/MyApp.js",
-                    lineNumber: 40,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/MyApp.js",
-            lineNumber: 38,
+            lineNumber: 13,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/MyApp.js",
-        lineNumber: 37,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }
@@ -27366,7 +27325,7 @@ $RefreshReg$(_c, "MyApp");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/Sidebar":"aIxFa","./components/Chatbot":"Dlst0","./components/StudyMusic":"lSm3f","./components/StudyRoom":"1aTfp","./components/HomePage":"2urwl","./MyApp.css":"5q1Hd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/Sidebar":"aIxFa","./components/StudyMusic":"lSm3f","./components/StudyRoom":"1aTfp","./MyApp.css":"5q1Hd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/ToDoList":"h0QOw"}],"9xmpe":[function(require,module,exports,__globalThis) {
 /**
  * React Router DOM v6.28.1
  *
@@ -34621,68 +34580,59 @@ var _sidebarCss = require("../styles/Sidebar.css");
 function Sidebar() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "sidebar",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Menu"
-            }, void 0, false, {
-                fileName: "src/components/Sidebar.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/",
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "src/components/Sidebar.js",
-                            lineNumber: 11,
-                            columnNumber: 11
-                        }, this)
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/",
+                        children: "Dashboard"
                     }, void 0, false, {
                         fileName: "src/components/Sidebar.js",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/playlists",
-                            children: "Study Music"
-                        }, void 0, false, {
-                            fileName: "src/components/Sidebar.js",
-                            lineNumber: 14,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/Sidebar.js",
-                        lineNumber: 13,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/rooms",
-                            children: "Study Room"
-                        }, void 0, false, {
-                            fileName: "src/components/Sidebar.js",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/Sidebar.js",
-                        lineNumber: 16,
-                        columnNumber: 9
+                        lineNumber: 11,
+                        columnNumber: 11
                     }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Sidebar.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "src/components/Sidebar.js",
+                    lineNumber: 10,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/playlists",
+                        children: "Study Music"
+                    }, void 0, false, {
+                        fileName: "src/components/Sidebar.js",
+                        lineNumber: 14,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/Sidebar.js",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/rooms",
+                        children: "Study Room"
+                    }, void 0, false, {
+                        fileName: "src/components/Sidebar.js",
+                        lineNumber: 17,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/Sidebar.js",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Sidebar.js",
+            lineNumber: 9,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "src/components/Sidebar.js",
-        lineNumber: 7,
+        lineNumber: 8,
         columnNumber: 5
     }, this);
 }
@@ -34840,111 +34790,7 @@ function registerExportsForReactRefresh(module1) {
 },{"7422ead32dcc1e6b":"786KC","630b62916b1ae0e7":"4SQxb"}],"4SQxb":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"name\":\"react-refresh\",\"description\":\"React is a JavaScript library for building user interfaces.\",\"keywords\":[\"react\"],\"version\":\"0.14.2\",\"homepage\":\"https://reactjs.org/\",\"bugs\":\"https://github.com/facebook/react/issues\",\"license\":\"MIT\",\"files\":[\"LICENSE\",\"README.md\",\"babel.js\",\"runtime.js\",\"cjs/\",\"umd/\"],\"main\":\"runtime.js\",\"exports\":{\".\":\"./runtime.js\",\"./runtime\":\"./runtime.js\",\"./babel\":\"./babel.js\",\"./package.json\":\"./package.json\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/facebook/react.git\",\"directory\":\"packages/react\"},\"engines\":{\"node\":\">=0.10.0\"},\"devDependencies\":{\"react-16-8\":\"npm:react@16.8.0\",\"react-dom-16-8\":\"npm:react-dom@16.8.0\",\"scheduler-0-13\":\"npm:scheduler@0.13.0\"}}");
 
-},{}],"Dlst0":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$9999 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9999.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>Chatbot);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _chatbotCss = require("../styles/Chatbot.css");
-var _s = $RefreshSig$();
-function Chatbot() {
-    _s();
-    const [messages, setMessages] = (0, _react.useState)([]);
-    const [input, setInput] = (0, _react.useState)('');
-    const sendMessage = ()=>{
-        if (input.trim()) {
-            setMessages([
-                ...messages,
-                {
-                    sender: 'user',
-                    text: input
-                },
-                {
-                    sender: 'bot',
-                    text: 'Hello! How can I help?'
-                }
-            ]);
-            setInput('');
-        }
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "chatbot",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Chatbot"
-            }, void 0, false, {
-                fileName: "src/components/Chatbot.js",
-                lineNumber: 17,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "chatbox",
-                children: messages.map((msg, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: `message ${msg.sender}`,
-                        children: msg.text
-                    }, i, false, {
-                        fileName: "src/components/Chatbot.js",
-                        lineNumber: 20,
-                        columnNumber: 11
-                    }, this))
-            }, void 0, false, {
-                fileName: "src/components/Chatbot.js",
-                lineNumber: 18,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "input-area",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        value: input,
-                        onChange: (e)=>setInput(e.target.value),
-                        placeholder: "Ask me anything..."
-                    }, void 0, false, {
-                        fileName: "src/components/Chatbot.js",
-                        lineNumber: 24,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: sendMessage,
-                        children: "Send"
-                    }, void 0, false, {
-                        fileName: "src/components/Chatbot.js",
-                        lineNumber: 30,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Chatbot.js",
-                lineNumber: 23,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Chatbot.js",
-        lineNumber: 16,
-        columnNumber: 5
-    }, this);
-}
-_s(Chatbot, "HDAtGPGcvWga1zf1TBXg51T+tsc=");
-_c = Chatbot;
-var _c;
-$RefreshReg$(_c, "Chatbot");
-
-  $parcel$ReactRefreshHelpers$9999.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/Chatbot.css":"7jfK7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7jfK7":[function() {},{}],"lSm3f":[function(require,module,exports,__globalThis) {
+},{}],"lSm3f":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$626a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35092,52 +34938,128 @@ $RefreshReg$(_c, "StudyRoom");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/StudyRoom.css":"5JwSJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5JwSJ":[function() {},{}],"2urwl":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$c57c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/StudyRoom.css":"5JwSJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5JwSJ":[function() {},{}],"5q1Hd":[function() {},{}],"h0QOw":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$5330 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c57c.prelude(module);
+$parcel$ReactRefreshHelpers$5330.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>HomePage);
+parcelHelpers.export(exports, "default", ()=>TodoList);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-function HomePage() {
+var _toDoListCss = require("../styles/ToDoList.css"); // CSS file for styling the list
+var _s = $RefreshSig$();
+function TodoList() {
+    _s();
+    const numberOfLines = 10; // Number of lines on your notepad image
+    const initialTasks = Array(numberOfLines).fill({
+        text: '',
+        checked: false
+    }); // Predefined blank tasks
+    const [tasks, setTasks] = (0, _react.useState)(initialTasks);
+    (0, _react.useEffect)(()=>{
+        const savedTasks = JSON.parse(localStorage.getItem('tasks')) || initialTasks;
+        setTasks(savedTasks);
+    }, []);
+    (0, _react.useEffect)(()=>{
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }, [
+        tasks
+    ]);
+    const handleTaskChange = (index, value)=>{
+        const updatedTasks = [
+            ...tasks
+        ];
+        updatedTasks[index].text = value;
+        setTasks(updatedTasks);
+    };
+    const handleCheckboxToggle = (index)=>{
+        const updatedTasks = [
+            ...tasks
+        ];
+        updatedTasks[index].checked = !updatedTasks[index].checked;
+        setTasks(updatedTasks);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Welcome to the Study App!"
-            }, void 0, false, {
-                fileName: "src/components/HomePage.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "Select an option from the sidebar to get started!"
-            }, void 0, false, {
-                fileName: "src/components/HomePage.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/HomePage.js",
-        lineNumber: 5,
+        className: "todo-list-container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "notepad",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: "To-Do"
+                }, void 0, false, {
+                    fileName: "src/components/ToDoList.js",
+                    lineNumber: 33,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "todo-list-content",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        children: tasks.map((task, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: "task-row",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        checked: task.checked,
+                                        onChange: ()=>handleCheckboxToggle(index),
+                                        className: "checkbox"
+                                    }, void 0, false, {
+                                        fileName: "src/components/ToDoList.js",
+                                        lineNumber: 38,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "text",
+                                        value: task.text,
+                                        onChange: (e)=>handleTaskChange(index, e.target.value),
+                                        className: `task-input ${task.checked ? 'checked' : ''}`
+                                    }, void 0, false, {
+                                        fileName: "src/components/ToDoList.js",
+                                        lineNumber: 44,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, index, true, {
+                                fileName: "src/components/ToDoList.js",
+                                lineNumber: 37,
+                                columnNumber: 15
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/components/ToDoList.js",
+                        lineNumber: 35,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/ToDoList.js",
+                    lineNumber: 34,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/ToDoList.js",
+            lineNumber: 32,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/ToDoList.js",
+        lineNumber: 31,
         columnNumber: 5
     }, this);
 }
-_c = HomePage;
+_s(TodoList, "tyTueluSyoas+4OQeyzppn3P4mY=");
+_c = TodoList;
 var _c;
-$RefreshReg$(_c, "HomePage");
+$RefreshReg$(_c, "TodoList");
 
-  $parcel$ReactRefreshHelpers$c57c.postlude(module);
+  $parcel$ReactRefreshHelpers$5330.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5q1Hd":[function() {},{}]},["aQL8O","9mu7C","8lqZg"], "8lqZg", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../styles/ToDoList.css":"l2Rk2"}],"l2Rk2":[function() {},{}]},["aQL8O","9mu7C","8lqZg"], "8lqZg", "parcelRequire94c2")
 
 //# sourceMappingURL=index.975ef6c8.js.map

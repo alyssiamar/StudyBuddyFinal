@@ -1,0 +1,64 @@
+.todo-list-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 30px;
+
+    position: 500px; /* Adjust this value to move further left */
+
+  }
+  
+  .notepad {
+    width: 400px; /* Match your image width */
+    height: 600px; /* Match your image height */
+    padding: 20px;
+    border: 3px solid #000; /* Border around the notepad */
+    border-radius: 12px; /* Rounded edges */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .notepad h2 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .todo-list-content {
+    margin-top: 20px;
+  }
+  
+  .task-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 12px; /* Space between lines */
+  }
+  
+  .checkbox {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .task-input {
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0); /* Transparent input to blend with background */
+    outline: none;
+    text-align: left;
+  }
+  
+  .task-input.checked {
+    text-decoration: line-through; /* Strike-through effect for completed tasks */
+  }
+  
+  .task-input:focus {
+    border-bottom: 2px solid #000;
+  }
+  
+  
