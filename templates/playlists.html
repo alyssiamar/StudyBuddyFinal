@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spotify Playlists</title>
+
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <script src="https://sdk.scdn.co/spotify-player.js"></script>
   <style>
     body {
@@ -11,18 +14,89 @@
       text-align: center;
       margin-top: 50px;
     }
+
     .playlist {
       margin-bottom: 20px;
     }
-    button {
-      margin: 10px;
-      padding: 10px 20px;
+
+    .playlist button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #1db954;
+      border: none;
+      border-radius: 5px;
+      color: white;
       font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .playlist button:hover {
+      background-color: #1ed760;
+      transform: scale(1.05);
+    }
+
+    /* Global Player Controls */
+    .controls {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .controls button {
+      background-color: #1db954; /* Spotify green */
+      border: none;
+      border-radius: 50%;
+      color: white;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .controls button:hover {
+      background-color: #1ed760;
+      transform: scale(1.1);
+    }
+
+    .controls button:active {
+      transform: scale(0.95);
+    }
+
+    .controls button i {
+      pointer-events: none;
+    }
+
+    button:disabled {
+      background-color: gray;
+      cursor: not-allowed;
     }
   </style>
 </head>
 <body>
+  <!-- Logout Button -->
+  <div style="text-align: right; margin: 10px;">
+    <a href="/logout" style="
+      text-decoration: none; 
+      background-color: #ff4d4d; 
+      color: white; 
+      padding: 10px 20px; 
+      border-radius: 5px; 
+      font-size: 16px;">
+      Logout
+    </a>
+  </div>
+
   <h1>Your Spotify Playlists</h1>
+
   <div>
     {% for playlist in playlists %}
     <div class="playlist">
@@ -30,20 +104,39 @@
       {% if playlist.images %}
       <img src="{{ playlist.images[0].url }}" alt="{{ playlist.name }}" width="200">
       {% endif %}
-      <div>
-        <button class="play-button" data-uri="{{ playlist.uri }}">Play</button>
-        <button class="pause-button">Pause</button>
-        <button class="next-button">Next</button>
-        <button class="previous-button">Previous</button>
-      </div>
+      <button class="select-playlist-button" data-uri="{{ playlist.uri }}">
+        Select Playlist
+      </button>
     </div>
     {% endfor %}
   </div>
 
+  <!-- Global Player Controls -->
+  <div class="controls">
+    <button id="play-button">
+      <i class="fas fa-play"></i>
+    </button>
+    <button id="pause-button">
+      <i class="fas fa-pause"></i>
+    </button>
+    <button id="next-button">
+      <i class="fas fa-forward"></i>
+    </button>
+    <button id="previous-button">
+      <i class="fas fa-backward"></i>
+    </button>
+  </div>
+
   <script>
+    let currentPlaylistUri = null; // Holds the currently selected playlist URI
+
     fetch("/token")
       .then(response => response.json())
       .then(data => {
+        if (data.error) {
+          throw new Error("User not authenticated");
+        }
+
         const token = data.access_token;
 
         window.onSpotifyWebPlaybackSDKReady = () => {
@@ -59,44 +152,122 @@
             }
           });
 
-          document.querySelectorAll(".play-button").forEach(button => {
+          // Playlist Selection Logic
+          document.querySelectorAll(".select-playlist-button").forEach(button => {
             button.addEventListener("click", () => {
-              const uri = button.getAttribute("data-uri");
+              currentPlaylistUri = button.getAttribute("data-uri");
+              console.log(`DEBUG: Selected playlist URI: ${currentPlaylistUri}`);
+              if (currentPlaylistUri) {
+                player._options.getOAuthToken(accessToken => {
+                  fetch("https://api.spotify.com/v1/me/player/play", {
+                    method: "PUT",
+                    body: JSON.stringify({ context_uri: currentPlaylistUri }),
+                    headers: {
+                      "Content-Type": "application/json",
+                      "Authorization": `Bearer ${accessToken}`
+                    }
+                  })
+                  .then(response => {
+                    if (response.ok) {
+                      console.log("DEBUG: Playlist started playing successfully!");
+                    } else {
+                      console.error("DEBUG: Failed to start playlist:", response.statusText);
+                      alert(`Error: ${response.statusText}. Make sure Spotify is open and an active device is available.`);
+                    }
+                  })
+                  .catch(error => console.error("DEBUG: Error starting playback:", error));
+                });
+              } else {
+                console.error("DEBUG: No URI found for the selected playlist.");
+              }
+            });
+          });
+
+          // Play Button
+          document.getElementById("play-button").addEventListener("click", () => {
+            if (currentPlaylistUri) {
+              player.resume();
+            } else {
+              alert("Please select a playlist first.");
+            }
+          });
+
+          // Pause Button
+          document.getElementById("pause-button").addEventListener("click", () => {
+            if (currentPlaylistUri) {
               player._options.getOAuthToken(accessToken => {
-                fetch("https://api.spotify.com/v1/me/player/play", {
+                fetch("https://api.spotify.com/v1/me/player/pause", {
                   method: "PUT",
-                  body: JSON.stringify({ context_uri: uri }),
                   headers: {
-                    "Content-Type": "application/json",
                     "Authorization": `Bearer ${accessToken}`
                   }
-                });
+                })
+                .then(response => {
+                  if (response.ok) {
+                    console.log("DEBUG: Playback paused successfully!");
+                  } else {
+                    console.error("DEBUG: Failed to pause playback:", response.statusText);
+                  }
+                })
+                .catch(error => console.error("DEBUG: Error pausing playback:", error));
               });
+            } else {
+              alert("Please select a playlist first.");
+            }
+          });
+
+          // Next Button
+          document.getElementById("next-button").addEventListener("click", () => {
+            player._options.getOAuthToken(accessToken => {
+              fetch("https://api.spotify.com/v1/me/player/next", {
+                method: "POST",
+                headers: {
+                  "Authorization": `Bearer ${accessToken}`
+                }
+              })
+              .then(response => {
+                if (response.ok) {
+                  console.log("DEBUG: Skipped to the next track!");
+                } else {
+                  console.error("DEBUG: Failed to skip to next track:", response.statusText);
+                }
+              })
+              .catch(error => console.error("DEBUG: Error skipping to next track:", error));
             });
           });
 
-          document.querySelectorAll(".pause-button").forEach(button => {
-            button.addEventListener("click", () => {
-              player.pause();
-            });
-          });
-
-          document.querySelectorAll(".next-button").forEach(button => {
-            button.addEventListener("click", () => {
-              player.nextTrack();
-            });
-          });
-
-          document.querySelectorAll(".previous-button").forEach(button => {
-            button.addEventListener("click", () => {
-              player.previousTrack();
+          // Previous Button
+          document.getElementById("previous-button").addEventListener("click", () => {
+            player._options.getOAuthToken(accessToken => {
+              fetch("https://api.spotify.com/v1/me/player/previous", {
+                method: "POST",
+                headers: {
+                  "Authorization": `Bearer ${accessToken}`
+                }
+              })
+              .then(response => {
+                if (response.ok) {
+                  console.log("DEBUG: Skipped to the previous track!");
+                } else {
+                  console.error("DEBUG: Failed to skip to previous track:", response.statusText);
+                }
+              })
+              .catch(error => console.error("DEBUG: Error skipping to previous track:", error));
             });
           });
         };
       })
       .catch(error => {
         console.error("Error fetching token:", error);
+        // Disable buttons if token fetch fails
+        document.querySelectorAll("button").forEach(button => {
+          button.disabled = true;
+        });
+        alert("You are logged out. Please log in again to use these features.");
+        window.location.href = "/"; // Redirect to login page
       });
   </script>
 </body>
 </html>
+
+
