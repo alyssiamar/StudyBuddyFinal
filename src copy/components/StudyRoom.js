@@ -11,8 +11,6 @@ export default function StudyRoom() {
       <p className="description">Focus in 25-minute sessions with breaks in between.</p>
       <li><Link to = "/flowtime">[ FlowTime] </Link></li>
       <p className="description">Work for as long as you're productive, then take a break.</p>
-      <li><Link to = "/interleaving">[ Interleaving] </Link></li>
-      <p className="description">Switch between different tasks or topics to improve retention.</p>
       </div>
     </div>
   );

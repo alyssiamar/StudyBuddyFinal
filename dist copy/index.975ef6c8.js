@@ -27241,10 +27241,8 @@ var _pomodoroTimer = require("./components/PomodoroTimer");
 var _pomodoroTimerDefault = parcelHelpers.interopDefault(_pomodoroTimer);
 var _flowtimeTimer = require("./components/FlowtimeTimer");
 var _flowtimeTimerDefault = parcelHelpers.interopDefault(_flowtimeTimer);
-var _taskManager = require("./components/TaskManager");
-var _taskManagerDefault = parcelHelpers.interopDefault(_taskManager);
-var _myApp = require("./MyApp");
-var _myAppDefault = parcelHelpers.interopDefault(_myApp);
+var _spotifyConnect = require("./components/SpotifyConnect"); // Import from the new file
+var _spotifyConnectDefault = parcelHelpers.interopDefault(_spotifyConnect);
 function MyApp() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27252,7 +27250,7 @@ function MyApp() {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarDefault.default), {}, void 0, false, {
                     fileName: "src/MyApp.js",
-                    lineNumber: 18,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27266,17 +27264,17 @@ function MyApp() {
                                         className: "todo-list-main"
                                     }, void 0, false, {
                                         fileName: "src/MyApp.js",
-                                        lineNumber: 21,
+                                        lineNumber: 24,
                                         columnNumber: 45
                                     }, void 0)
                                 }, void 0, false, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 21,
+                                    lineNumber: 24,
                                     columnNumber: 40
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 21,
+                                lineNumber: 24,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27287,24 +27285,24 @@ function MyApp() {
                                             className: "right-aligned-todo"
                                         }, void 0, false, {
                                             fileName: "src/MyApp.js",
-                                            lineNumber: 22,
+                                            lineNumber: 25,
                                             columnNumber: 54
                                         }, void 0),
                                         " ",
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyMusicDefault.default), {}, void 0, false, {
                                             fileName: "src/MyApp.js",
-                                            lineNumber: 22,
+                                            lineNumber: 25,
                                             columnNumber: 99
                                         }, void 0)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 22,
+                                    lineNumber: 25,
                                     columnNumber: 49
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 22,
+                                lineNumber: 25,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27315,24 +27313,24 @@ function MyApp() {
                                             className: "right-aligned-todo"
                                         }, void 0, false, {
                                             fileName: "src/MyApp.js",
-                                            lineNumber: 23,
+                                            lineNumber: 26,
                                             columnNumber: 56
                                         }, void 0),
                                         " ",
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pomodoroTimerDefault.default), {}, void 0, false, {
                                             fileName: "src/MyApp.js",
-                                            lineNumber: 23,
+                                            lineNumber: 26,
                                             columnNumber: 101
                                         }, void 0)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 23,
+                                    lineNumber: 26,
                                     columnNumber: 51
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 23,
+                                lineNumber: 26,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27343,24 +27341,24 @@ function MyApp() {
                                             className: "right-aligned-todo"
                                         }, void 0, false, {
                                             fileName: "src/MyApp.js",
-                                            lineNumber: 24,
+                                            lineNumber: 27,
                                             columnNumber: 56
                                         }, void 0),
                                         " ",
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _flowtimeTimerDefault.default), {}, void 0, false, {
                                             fileName: "src/MyApp.js",
-                                            lineNumber: 24,
+                                            lineNumber: 27,
                                             columnNumber: 101
                                         }, void 0)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 24,
+                                    lineNumber: 27,
                                     columnNumber: 51
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 24,
+                                lineNumber: 27,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27371,86 +27369,70 @@ function MyApp() {
                                             className: "right-aligned-todo"
                                         }, void 0, false, {
                                             fileName: "src/MyApp.js",
-                                            lineNumber: 25,
+                                            lineNumber: 28,
                                             columnNumber: 53
                                         }, void 0),
                                         " ",
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyRoomDefault.default), {}, void 0, false, {
                                             fileName: "src/MyApp.js",
-                                            lineNumber: 25,
+                                            lineNumber: 28,
                                             columnNumber: 98
                                         }, void 0)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 25,
+                                    lineNumber: 28,
                                     columnNumber: 48
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 25,
-                                columnNumber: 15
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/interleaving",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {
-                                            className: "right-aligned-todo"
-                                        }, void 0, false, {
-                                            fileName: "src/MyApp.js",
-                                            lineNumber: 26,
-                                            columnNumber: 60
-                                        }, void 0),
-                                        " ",
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _taskManagerDefault.default), {}, void 0, false, {
-                                            fileName: "src/MyApp.js",
-                                            lineNumber: 26,
-                                            columnNumber: 105
-                                        }, void 0)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/MyApp.js",
-                                    lineNumber: 26,
-                                    columnNumber: 55
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/MyApp.js",
-                                lineNumber: 26,
+                                lineNumber: 28,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                                 path: "/tasks",
                                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {}, void 0, false, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 27,
+                                    lineNumber: 29,
                                     columnNumber: 45
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 27,
+                                lineNumber: 29,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/spotify-connect",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _spotifyConnectDefault.default), {}, void 0, false, {
+                                    fileName: "src/MyApp.js",
+                                    lineNumber: 30,
+                                    columnNumber: 55
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "src/MyApp.js",
+                                lineNumber: 30,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/MyApp.js",
-                        lineNumber: 20,
+                        lineNumber: 23,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "src/MyApp.js",
-                    lineNumber: 19,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/MyApp.js",
-            lineNumber: 17,
+            lineNumber: 20,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/MyApp.js",
-        lineNumber: 16,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }
@@ -27463,7 +27445,7 @@ $RefreshReg$(_c, "MyApp");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/Sidebar":"aIxFa","./components/StudyMusic":"lSm3f","./components/StudyRoom":"1aTfp","./components/ToDoList":"h0QOw","./MyApp.css":"5q1Hd","./components/PomodoroTimer":"as4zE","./components/FlowtimeTimer":"8E7YH","./components/TaskManager":"FjUtl","./MyApp":"91nZZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/Sidebar":"aIxFa","./components/StudyMusic":"lSm3f","./components/StudyRoom":"1aTfp","./components/ToDoList":"h0QOw","./MyApp.css":"5q1Hd","./components/PomodoroTimer":"as4zE","./components/FlowtimeTimer":"8E7YH","./components/SpotifyConnect":"2oN6p","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports,__globalThis) {
 /**
  * React Router DOM v6.28.1
  *
@@ -34937,11 +34919,109 @@ $parcel$ReactRefreshHelpers$626a.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+// Component for SpotifyConnect
+parcelHelpers.export(exports, "SpotifyMusic", ()=>SpotifyMusic);
 parcelHelpers.export(exports, "default", ()=>StudyMusic);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
+var _react = require("react"); // Import useState and useEffect
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
 var _studyMusicCss = require("../styles/StudyMusic.css"); // Optional custom styles
+var _s = $RefreshSig$();
+function SpotifyMusic() {
+    _s();
+    const [playlists, setPlaylists] = (0, _react.useState)([]);
+    const [loading, setLoading] = (0, _react.useState)(true);
+    const [error, setError] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        // Extract access token or error from the URL
+        const params = new URLSearchParams(window.location.search);
+        const accessToken = params.get('access_token');
+        const errorParam = params.get('error');
+        if (errorParam) {
+            setError(errorParam);
+            setLoading(false);
+            return;
+        }
+        if (accessToken) fetch('http://127.0.0.1:5000/playlists', {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        }).then((response)=>response.json()).then((data)=>{
+            setPlaylists(data.playlists || []);
+            setLoading(false);
+        }).catch((err)=>{
+            console.error(err);
+            setError('Failed to load playlists');
+            setLoading(false);
+        });
+    }, []);
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        children: "Loading playlists..."
+    }, void 0, false, {
+        fileName: "src/components/StudyMusic.js",
+        lineNumber: 43,
+        columnNumber: 12
+    }, this);
+    if (error) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        children: error
+    }, void 0, false, {
+        fileName: "src/components/StudyMusic.js",
+        lineNumber: 47,
+        columnNumber: 12
+    }, this);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Your Playlists:"
+            }, void 0, false, {
+                fileName: "src/components/StudyMusic.js",
+                lineNumber: 52,
+                columnNumber: 7
+            }, this),
+            playlists.map((playlist)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                            children: playlist.name
+                        }, void 0, false, {
+                            fileName: "src/components/StudyMusic.js",
+                            lineNumber: 55,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: playlist.images[0]?.url,
+                            alt: playlist.name,
+                            width: "200"
+                        }, void 0, false, {
+                            fileName: "src/components/StudyMusic.js",
+                            lineNumber: 56,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            href: playlist.external_urls.spotify,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            children: "Open on Spotify"
+                        }, void 0, false, {
+                            fileName: "src/components/StudyMusic.js",
+                            lineNumber: 57,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, playlist.id, true, {
+                    fileName: "src/components/StudyMusic.js",
+                    lineNumber: 54,
+                    columnNumber: 9
+                }, this))
+        ]
+    }, void 0, true, {
+        fileName: "src/components/StudyMusic.js",
+        lineNumber: 51,
+        columnNumber: 5
+    }, this);
+}
+_s(SpotifyMusic, "SA2AOzH5C36IUcyaLIEPV+RRUeE=");
+_c = SpotifyMusic;
 function StudyMusic() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "study-music-page",
@@ -34950,51 +35030,120 @@ function StudyMusic() {
                 children: "Your Study Playlist Hub"
             }, void 0, false, {
                 fileName: "src/components/StudyMusic.js",
-                lineNumber: 7,
+                lineNumber: 69,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "playlist-container",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "playlist-card",
-                        children: "Classical Music"
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    to: "/spotify-connect",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "spotify-link-button",
+                        children: "Connect to Spotify"
                     }, void 0, false, {
                         fileName: "src/components/StudyMusic.js",
-                        lineNumber: 9,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "playlist-card",
-                        children: "Nature Sounds"
-                    }, void 0, false, {
-                        fileName: "src/components/StudyMusic.js",
-                        lineNumber: 10,
-                        columnNumber: 9
+                        lineNumber: 72,
+                        columnNumber: 11
                     }, this)
-                ]
-            }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "src/components/StudyMusic.js",
+                    lineNumber: 71,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "src/components/StudyMusic.js",
-                lineNumber: 8,
+                lineNumber: 70,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/StudyMusic.js",
-        lineNumber: 6,
+        lineNumber: 68,
         columnNumber: 5
     }, this);
-}
-_c = StudyMusic;
-var _c;
-$RefreshReg$(_c, "StudyMusic");
+} // import React, { useState, useEffect } from 'react'; // Import useState and useEffect
+ // import { Link } from 'react-router-dom';
+ // import '../styles/StudyMusic.css'; // Optional custom styles
+ // // Component for SpotifyConnect
+ // function SpotifyMusic() {
+ //   const [playlists, setPlaylists] = useState([]);
+ //   const [loading, setLoading] = useState(true);
+ //   const [error, setError] = useState(null);
+ //   useEffect(() => {
+ //     // Extract access token or error from the URL
+ //     const params = new URLSearchParams(window.location.search);
+ //     const accessToken = params.get('access_token');
+ //     const errorParam = params.get('error'); // Avoid naming conflict with state variable
+ //     if (errorParam) {
+ //       setError(errorParam);
+ //       setLoading(false);
+ //       return;
+ //     }
+ //     if (accessToken) {
+ //       // Fetch playlists with the access token
+ //       fetch('http://127.0.0.1:5000/playlists', {
+ //         headers: {
+ //           Authorization: `Bearer ${accessToken}`,
+ //         },
+ //       })
+ //         .then((response) => response.json())
+ //         .then((data) => {
+ //           setPlaylists(data.playlists || []);
+ //           setLoading(false);
+ //         })
+ //         .catch((err) => {
+ //           console.error(err);
+ //           setError('Failed to load playlists');
+ //           setLoading(false);
+ //         });
+ //     }
+ //   }, []);
+ //   if (loading) {
+ //     return <p>Loading playlists...</p>;
+ //   }
+ //   if (error) {
+ //     return <p>{error}</p>;
+ //   }
+ //   return (
+ //     <div>
+ //       <h2>Your Playlists:</h2>
+ //       {playlists.map((playlist) => (
+ //         <div key={playlist.id}>
+ //           <h3>{playlist.name}</h3>
+ //           <img src={playlist.images[0]?.url} alt={playlist.name} width="200" />
+ //           <a href={playlist.external_urls.spotify} target="_blank" rel="noopener noreferrer">
+ //             Open on Spotify
+ //           </a>
+ //         </div>
+ //       ))}
+ //     </div>
+ //   );
+ // }
+ // // Component for StudyMusic
+ // export default function StudyMusic() {
+ //   return (
+ //     <div className="study-music-page">
+ //       <h1>Your Study Playlist Hub</h1>
+ //       <div className="playlist-container">
+ //         <Link to="/spotify-connect">
+ //           <button className="spotify-link-button">Connect to Spotify</button>
+ //         </Link>
+ //       </div>
+ //       <SpotifyMusic /> {/* Display SpotifyConnect inside StudyMusic */}
+ //     </div>
+ //   );
+ // }
+_c1 = StudyMusic;
+var _c, _c1;
+$RefreshReg$(_c, "SpotifyMusic");
+$RefreshReg$(_c1, "StudyMusic");
 
   $parcel$ReactRefreshHelpers$626a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/StudyMusic.css":"8bgyF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8bgyF":[function() {},{}],"1aTfp":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../styles/StudyMusic.css":"8bgyF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8bgyF":[function() {},{}],"1aTfp":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$0339 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35065,28 +35214,6 @@ function StudyRoom() {
                     }, void 0, false, {
                         fileName: "src/components/StudyRoom.js",
                         lineNumber: 13,
-                        columnNumber: 7
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/interleaving",
-                            children: "[ Interleaving] "
-                        }, void 0, false, {
-                            fileName: "src/components/StudyRoom.js",
-                            lineNumber: 14,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/components/StudyRoom.js",
-                        lineNumber: 14,
-                        columnNumber: 7
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "description",
-                        children: "Switch between different tasks or topics to improve retention."
-                    }, void 0, false, {
-                        fileName: "src/components/StudyRoom.js",
-                        lineNumber: 15,
                         columnNumber: 7
                     }, this)
                 ]
@@ -35554,101 +35681,117 @@ $RefreshReg$(_c, "FlowtimeTimer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/FlowTimer.css":"d7yBP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"d7yBP":[function() {},{}],"FjUtl":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$d090 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/FlowTimer.css":"d7yBP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"d7yBP":[function() {},{}],"2oN6p":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$dbd0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d090.prelude(module);
+$parcel$ReactRefreshHelpers$dbd0.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>SpotifyConnect);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
-function TaskManager() {
+function SpotifyConnect() {
     _s();
-    const [tasks, setTasks] = (0, _react.useState)([]); // State to store tasks
-    const [newTask, setNewTask] = (0, _react.useState)(''); // State to manage new task input
-    const handleAddTask = ()=>{
-        if (newTask.trim()) {
-            setTasks([
-                ...tasks,
-                newTask
-            ]);
-            setNewTask(''); // Clear the input field
+    const [playlists, setPlaylists] = (0, _react.useState)([]);
+    const [loading, setLoading] = (0, _react.useState)(true);
+    const [error, setError] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        const params = new URLSearchParams(window.location.search);
+        const accessToken = params.get('access_token');
+        const errorParam = params.get('error');
+        if (errorParam) {
+            setError(errorParam);
+            setLoading(false);
+            return;
         }
-    };
-    const handleDeleteTask = (taskToDelete)=>{
-        setTasks(tasks.filter((task)=>task !== taskToDelete));
-    };
+        if (accessToken) fetch('http://127.0.0.1:5000/playlists', {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        }).then((response)=>response.json()).then((data)=>{
+            setPlaylists(data.playlists || []);
+            setLoading(false);
+        }).catch((err)=>{
+            console.error(err);
+            setError('Failed to load playlists');
+            setLoading(false);
+        });
+    }, []);
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        children: "Loading playlists..."
+    }, void 0, false, {
+        fileName: "src/components/SpotifyConnect.js",
+        lineNumber: 39,
+        columnNumber: 12
+    }, this);
+    if (error) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        children: error
+    }, void 0, false, {
+        fileName: "src/components/SpotifyConnect.js",
+        lineNumber: 43,
+        columnNumber: 12
+    }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "task-manager",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Task Manager"
+                children: "Your Playlists:"
             }, void 0, false, {
-                fileName: "src/components/TaskManager.js",
-                lineNumber: 20,
+                fileName: "src/components/SpotifyConnect.js",
+                lineNumber: 48,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                type: "text",
-                value: newTask,
-                onChange: (e)=>setNewTask(e.target.value),
-                placeholder: "Enter a new task"
-            }, void 0, false, {
-                fileName: "src/components/TaskManager.js",
-                lineNumber: 21,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: handleAddTask,
-                children: "Add Task"
-            }, void 0, false, {
-                fileName: "src/components/TaskManager.js",
-                lineNumber: 27,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                children: tasks.map((task, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: [
-                            task,
-                            " ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                onClick: ()=>handleDeleteTask(task),
-                                children: "Delete"
-                            }, void 0, false, {
-                                fileName: "src/components/TaskManager.js",
-                                lineNumber: 31,
-                                columnNumber: 20
-                            }, this)
-                        ]
-                    }, index, true, {
-                        fileName: "src/components/TaskManager.js",
-                        lineNumber: 30,
-                        columnNumber: 11
-                    }, this))
-            }, void 0, false, {
-                fileName: "src/components/TaskManager.js",
-                lineNumber: 28,
-                columnNumber: 7
-            }, this)
+            playlists.map((playlist)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                            children: playlist.name
+                        }, void 0, false, {
+                            fileName: "src/components/SpotifyConnect.js",
+                            lineNumber: 51,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: playlist.images[0]?.url,
+                            alt: playlist.name,
+                            width: "200"
+                        }, void 0, false, {
+                            fileName: "src/components/SpotifyConnect.js",
+                            lineNumber: 52,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            href: playlist.external_urls.spotify,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            children: "Open on Spotify"
+                        }, void 0, false, {
+                            fileName: "src/components/SpotifyConnect.js",
+                            lineNumber: 53,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, playlist.id, true, {
+                    fileName: "src/components/SpotifyConnect.js",
+                    lineNumber: 50,
+                    columnNumber: 9
+                }, this))
         ]
     }, void 0, true, {
-        fileName: "src/components/TaskManager.js",
-        lineNumber: 19,
+        fileName: "src/components/SpotifyConnect.js",
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }
-_s(TaskManager, "MMRu7H+sKP7rEuK8M8zT6HaT89w=");
-_c = TaskManager;
-exports.default = TaskManager;
+_s(SpotifyConnect, "SA2AOzH5C36IUcyaLIEPV+RRUeE=");
+_c = SpotifyConnect;
 var _c;
-$RefreshReg$(_c, "TaskManager");
+$RefreshReg$(_c, "SpotifyConnect");
 
-  $parcel$ReactRefreshHelpers$d090.postlude(module);
+  $parcel$ReactRefreshHelpers$dbd0.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
