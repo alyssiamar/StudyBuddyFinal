@@ -1,37 +1,27 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
-function SignUpForm() {
+const SignUpForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
     const history = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        const userData = { email, password };
 
         try {
-            const response = await fetch("http://localhost:5000/api/signup", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(userData),
+            const response = await axios.post('http://localhost:5000/api/signup', {
+                email,
+                password
             });
 
-            const data = await response.json();
-
-            if (response.ok) {
-                console.log('User registered:', data);
-                history.push("/"); // Redirect to login page after successful signup
-            } else {
-                console.error('Signup failed:', data.message);
-                alert('Error signing up: ' + data.message);
+            if (response.status === 201) {
+                history.push('/login'); // Redirect to the login page after successful signup
             }
-        } catch (error) {
-            console.error('Network error during signup:', error);
-            alert('Network error: Unable to connect to the backend.');
+        } catch (err) {
+            setError(err.response?.data?.error || 'An error occurred');
         }
     };
 
@@ -39,24 +29,33 @@ function SignUpForm() {
         <div>
             <h2>Sign Up</h2>
             <form onSubmit={handleSubmit}>
-                <input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <input
-                    type="password"
-                    placeholder="Enter your password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
+                <div>
+                    <label>Email:</label>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                {error && <p style={{ color: 'red' }}>{error}</p>}
                 <button type="submit">Sign Up</button>
             </form>
+            <p>
+                Already have an account?{' '}
+                <a href="/login">Login</a>
+            </p>
         </div>
     );
-}
+};
 
 export default SignUpForm;
