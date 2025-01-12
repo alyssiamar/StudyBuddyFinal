@@ -1,0 +1,135 @@
+.sidebar {
+  position: relative;
+  top: 60px;
+  left: 65px;
+}
+
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  color: #2f4f4f;
+  padding: 30px;
+  font-family: Caveat Brush, static;
+  font-size: 45px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sidebar a:hover {
+  color: #2a9d8f;
+  text-decoration: underline;
+}
+
+.app-container {
+  height: 100vh;
+  display: flex;
+}
+
+.main-content {
+  width: 60%;
+  margin-left: 20%;
+  padding: 2rem;
+}
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.homepage-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  background-image: url("bg4.4c950eb4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.todo-list-container {
+  position: 500px;
+  align-items: center;
+  margin-top: 30px;
+  display: flex;
+}
+
+.notepad {
+  text-align: center;
+  border: 3px solid #000;
+  border-radius: 12px;
+  width: 400px;
+  height: 600px;
+  padding: 20px;
+  box-shadow: 0 8px 15px #0003;
+}
+
+.notepad h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-family: Caveat Brush, cursive;
+  font-size: 2rem;
+}
+
+.todo-list-content {
+  margin-top: 20px;
+}
+
+.task-row {
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.checkbox {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.task-input {
+  text-align: left;
+  background-color: #fff0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  width: 90%;
+  font-size: 1.1rem;
+}
+
+.task-input.checked {
+  text-decoration: line-through;
+}
+
+.task-input:focus {
+  border-bottom: 2px solid #000;
+}
+/*# sourceMappingURL=index.2212206d.css.map */

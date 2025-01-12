@@ -1,0 +1,50 @@
+.sidebar h2 {
+  font-size: 1.5rem;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  width: 60%;
+  margin-left: 20%;
+  padding: 2rem;
+}
+
+.homepage-container {
+  background-image: url("bg.a74eeabc.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  height: 100vh;
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+/*# sourceMappingURL=index.28e56a9f.css.map */
