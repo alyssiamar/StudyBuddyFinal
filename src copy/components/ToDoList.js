@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/ToDoList.css'; // CSS file for styling the list
 
-export default function TodoList() {
+export default function TodoList({className = '', style = {}}) {
   const numberOfLines = 10; // Number of lines on your notepad image
   const initialTasks = Array(numberOfLines).fill({text: '', checked: false}); // Predefined blank tasks
   const [tasks, setTasks] = useState(initialTasks);
@@ -28,7 +28,7 @@ export default function TodoList() {
   };
 
   return (
-    <div className="todo-list-container">
+    <div className={`todo-list-container ${className}`} style = {style}>
       <div className="notepad">
         <h2>To-Do</h2>
         <div className="todo-list-content">

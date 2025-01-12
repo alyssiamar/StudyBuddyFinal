@@ -2957,12 +2957,12 @@ const root = (0, _clientDefault.default).createRoot(document.getElementById('roo
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _myAppDefault.default), {}, void 0, false, {
         fileName: "src/index.js",
-        lineNumber: 8,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 7,
+    lineNumber: 8,
     columnNumber: 3
 }, undefined));
 
@@ -27237,6 +27237,14 @@ var _studyRoomDefault = parcelHelpers.interopDefault(_studyRoom);
 var _toDoList = require("./components/ToDoList");
 var _toDoListDefault = parcelHelpers.interopDefault(_toDoList);
 var _myAppCss = require("./MyApp.css");
+var _pomodoroTimer = require("./components/PomodoroTimer");
+var _pomodoroTimerDefault = parcelHelpers.interopDefault(_pomodoroTimer);
+var _flowtimeTimer = require("./components/FlowtimeTimer");
+var _flowtimeTimerDefault = parcelHelpers.interopDefault(_flowtimeTimer);
+var _taskManager = require("./components/TaskManager");
+var _taskManagerDefault = parcelHelpers.interopDefault(_taskManager);
+var _myApp = require("./MyApp");
+var _myAppDefault = parcelHelpers.interopDefault(_myApp);
 function MyApp() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27244,7 +27252,7 @@ function MyApp() {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarDefault.default), {}, void 0, false, {
                     fileName: "src/MyApp.js",
-                    lineNumber: 14,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27254,27 +27262,129 @@ function MyApp() {
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                                 path: "/",
                                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {}, void 0, false, {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {
+                                        className: "todo-list-main"
+                                    }, void 0, false, {
                                         fileName: "src/MyApp.js",
                                         lineNumber: 21,
-                                        columnNumber: 19
+                                        columnNumber: 45
                                     }, void 0)
                                 }, void 0, false, {
                                     fileName: "src/MyApp.js",
-                                    lineNumber: 20,
-                                    columnNumber: 17
+                                    lineNumber: 21,
+                                    columnNumber: 40
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
-                                lineNumber: 17,
-                                columnNumber: 13
+                                lineNumber: 21,
+                                columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                                 path: "/playlists",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyMusicDefault.default), {}, void 0, false, {
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {
+                                            className: "right-aligned-todo"
+                                        }, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 22,
+                                            columnNumber: 54
+                                        }, void 0),
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyMusicDefault.default), {}, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 22,
+                                            columnNumber: 99
+                                        }, void 0)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/MyApp.js",
+                                    lineNumber: 22,
+                                    columnNumber: 49
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "src/MyApp.js",
+                                lineNumber: 22,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/pomodoro",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {
+                                            className: "right-aligned-todo"
+                                        }, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 23,
+                                            columnNumber: 56
+                                        }, void 0),
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pomodoroTimerDefault.default), {}, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 23,
+                                            columnNumber: 101
+                                        }, void 0)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/MyApp.js",
+                                    lineNumber: 23,
+                                    columnNumber: 51
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "src/MyApp.js",
+                                lineNumber: 23,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/flowtime",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {
+                                            className: "right-aligned-todo"
+                                        }, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 24,
+                                            columnNumber: 56
+                                        }, void 0),
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _flowtimeTimerDefault.default), {}, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 24,
+                                            columnNumber: 101
+                                        }, void 0)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/MyApp.js",
+                                    lineNumber: 24,
+                                    columnNumber: 51
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "src/MyApp.js",
+                                lineNumber: 24,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/rooms",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {
+                                            className: "right-aligned-todo"
+                                        }, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 25,
+                                            columnNumber: 53
+                                        }, void 0),
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyRoomDefault.default), {}, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 25,
+                                            columnNumber: 98
+                                        }, void 0)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "src/MyApp.js",
                                     lineNumber: 25,
-                                    columnNumber: 49
+                                    columnNumber: 48
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
@@ -27282,37 +27392,65 @@ function MyApp() {
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/rooms",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _studyRoomDefault.default), {}, void 0, false, {
+                                path: "/interleaving",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {
+                                            className: "right-aligned-todo"
+                                        }, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 26,
+                                            columnNumber: 60
+                                        }, void 0),
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _taskManagerDefault.default), {}, void 0, false, {
+                                            fileName: "src/MyApp.js",
+                                            lineNumber: 26,
+                                            columnNumber: 105
+                                        }, void 0)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "src/MyApp.js",
                                     lineNumber: 26,
-                                    columnNumber: 45
+                                    columnNumber: 55
                                 }, void 0)
                             }, void 0, false, {
                                 fileName: "src/MyApp.js",
                                 lineNumber: 26,
                                 columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/tasks",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoListDefault.default), {}, void 0, false, {
+                                    fileName: "src/MyApp.js",
+                                    lineNumber: 27,
+                                    columnNumber: 45
+                                }, void 0)
+                            }, void 0, false, {
+                                fileName: "src/MyApp.js",
+                                lineNumber: 27,
+                                columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/MyApp.js",
-                        lineNumber: 16,
+                        lineNumber: 20,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "src/MyApp.js",
-                    lineNumber: 15,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/MyApp.js",
-            lineNumber: 13,
+            lineNumber: 17,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/MyApp.js",
-        lineNumber: 12,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }
@@ -27325,7 +27463,7 @@ $RefreshReg$(_c, "MyApp");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/Sidebar":"aIxFa","./components/StudyMusic":"lSm3f","./components/StudyRoom":"1aTfp","./MyApp.css":"5q1Hd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/ToDoList":"h0QOw"}],"9xmpe":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./components/Sidebar":"aIxFa","./components/StudyMusic":"lSm3f","./components/StudyRoom":"1aTfp","./components/ToDoList":"h0QOw","./MyApp.css":"5q1Hd","./components/PomodoroTimer":"as4zE","./components/FlowtimeTimer":"8E7YH","./components/TaskManager":"FjUtl","./MyApp":"91nZZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports,__globalThis) {
 /**
  * React Router DOM v6.28.1
  *
@@ -34820,7 +34958,7 @@ function StudyMusic() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "playlist-card",
-                        children: "Lo-fi Beats"
+                        children: "Classical Music"
                     }, void 0, false, {
                         fileName: "src/components/StudyMusic.js",
                         lineNumber: 9,
@@ -34828,18 +34966,10 @@ function StudyMusic() {
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "playlist-card",
-                        children: "Classical Music"
-                    }, void 0, false, {
-                        fileName: "src/components/StudyMusic.js",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "playlist-card",
                         children: "Nature Sounds"
                     }, void 0, false, {
                         fileName: "src/components/StudyMusic.js",
-                        lineNumber: 11,
+                        lineNumber: 10,
                         columnNumber: 9
                     }, this)
                 ]
@@ -34878,54 +35008,97 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _studyRoomCss = require("../styles/StudyRoom.css"); // Optional custom styles
+var _reactRouterDom = require("react-router-dom");
 function StudyRoom() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "study-room-page",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Your Study Room"
+                children: "[ Study Techniques ]"
             }, void 0, false, {
                 fileName: "src/components/StudyRoom.js",
-                lineNumber: 7,
+                lineNumber: 8,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "widgets",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "widget",
-                        children: "To-Do List"
-                    }, void 0, false, {
-                        fileName: "src/components/StudyRoom.js",
-                        lineNumber: 9,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "widget",
-                        children: "Timer"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/pomodoro",
+                            children: "[ Pomodoro] "
+                        }, void 0, false, {
+                            fileName: "src/components/StudyRoom.js",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, this)
                     }, void 0, false, {
                         fileName: "src/components/StudyRoom.js",
                         lineNumber: 10,
-                        columnNumber: 9
+                        columnNumber: 7
                     }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "widget",
-                        children: "Notes"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "description",
+                        children: "Focus in 25-minute sessions with breaks in between."
                     }, void 0, false, {
                         fileName: "src/components/StudyRoom.js",
                         lineNumber: 11,
-                        columnNumber: 9
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/flowtime",
+                            children: "[ FlowTime] "
+                        }, void 0, false, {
+                            fileName: "src/components/StudyRoom.js",
+                            lineNumber: 12,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/StudyRoom.js",
+                        lineNumber: 12,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "description",
+                        children: "Work for as long as you're productive, then take a break."
+                    }, void 0, false, {
+                        fileName: "src/components/StudyRoom.js",
+                        lineNumber: 13,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/interleaving",
+                            children: "[ Interleaving] "
+                        }, void 0, false, {
+                            fileName: "src/components/StudyRoom.js",
+                            lineNumber: 14,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/StudyRoom.js",
+                        lineNumber: 14,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "description",
+                        children: "Switch between different tasks or topics to improve retention."
+                    }, void 0, false, {
+                        fileName: "src/components/StudyRoom.js",
+                        lineNumber: 15,
+                        columnNumber: 7
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/StudyRoom.js",
-                lineNumber: 8,
+                lineNumber: 9,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/StudyRoom.js",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 }
@@ -34938,7 +35111,7 @@ $RefreshReg$(_c, "StudyRoom");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/StudyRoom.css":"5JwSJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5JwSJ":[function() {},{}],"5q1Hd":[function() {},{}],"h0QOw":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/StudyRoom.css":"5JwSJ","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5JwSJ":[function() {},{}],"h0QOw":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$5330 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34953,7 +35126,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _toDoListCss = require("../styles/ToDoList.css"); // CSS file for styling the list
 var _s = $RefreshSig$();
-function TodoList() {
+function TodoList({ className = '', style = {} }) {
     _s();
     const numberOfLines = 10; // Number of lines on your notepad image
     const initialTasks = Array(numberOfLines).fill({
@@ -34985,7 +35158,8 @@ function TodoList() {
         setTasks(updatedTasks);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "todo-list-container",
+        className: `todo-list-container ${className}`,
+        style: style,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "notepad",
             children: [
@@ -35060,6 +35234,425 @@ $RefreshReg$(_c, "TodoList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../styles/ToDoList.css":"l2Rk2"}],"l2Rk2":[function() {},{}]},["aQL8O","9mu7C","8lqZg"], "8lqZg", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/ToDoList.css":"l2Rk2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"l2Rk2":[function() {},{}],"5q1Hd":[function() {},{}],"as4zE":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$b7f8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b7f8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _pomodoroTimerCss = require("../styles/PomodoroTimer.css");
+var _s = $RefreshSig$();
+// Pomodoro Timer Component
+function PomodoroTimer() {
+    _s();
+    const [minutes, setMinutes] = (0, _react.useState)(25); // Default Pomodoro time: 25 minutes
+    const [seconds, setSeconds] = (0, _react.useState)(0); // Start with 0 seconds
+    const [isRunning, setIsRunning] = (0, _react.useState)(false); // Timer state (running or paused)
+    const [isBreak, setIsBreak] = (0, _react.useState)(false); // Whether the timer is for a break or Pomodoro session
+    // Effect to handle timer logic
+    (0, _react.useEffect)(()=>{
+        let interval;
+        // Start the timer if it's running
+        if (isRunning) interval = setInterval(()=>{
+            // Decrease time every second
+            if (seconds === 0) {
+                if (minutes === 0) {
+                    // Timer ends, switch to break
+                    setIsBreak(!isBreak);
+                    setMinutes(isBreak ? 25 : 5); // If it's a break, switch to 5 minutes; else, switch to 25 minutes
+                    setSeconds(0);
+                } else {
+                    setMinutes(minutes - 1);
+                    setSeconds(59);
+                }
+            } else setSeconds(seconds - 1);
+        }, 1000); // Decrease every second
+        else // If timer is paused, clear the interval
+        clearInterval(interval);
+        return ()=>clearInterval(interval); // Cleanup interval on unmount
+    }, [
+        isRunning,
+        minutes,
+        seconds,
+        isBreak
+    ]); // Re-run effect when timer state changes
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "timer",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: isBreak ? "Break Time!" : "Pomodoro Timer [Work Time!]"
+            }, void 0, false, {
+                fileName: "src/components/PomodoroTimer.js",
+                lineNumber: 44,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "time",
+                children: [
+                    String(minutes).padStart(2, '0'),
+                    ":",
+                    String(seconds).padStart(2, '0')
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PomodoroTimer.js",
+                lineNumber: 45,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "button-container",
+                children: [
+                    "  ",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>setIsRunning(!isRunning),
+                        children: isRunning ? "Pause" : "Start"
+                    }, void 0, false, {
+                        fileName: "src/components/PomodoroTimer.js",
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>{
+                            setIsRunning(false);
+                            setMinutes(25);
+                            setSeconds(0);
+                        },
+                        children: "Reset"
+                    }, void 0, false, {
+                        fileName: "src/components/PomodoroTimer.js",
+                        lineNumber: 52,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PomodoroTimer.js",
+                lineNumber: 48,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/PomodoroTimer.js",
+        lineNumber: 43,
+        columnNumber: 5
+    }, this);
+}
+_s(PomodoroTimer, "8MIb8kYEE9Ko0LZNFiNiuI/Mq/E=");
+_c = PomodoroTimer;
+// Main App component, including the timer
+function App() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "App",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PomodoroTimer, {}, void 0, false, {
+            fileName: "src/components/PomodoroTimer.js",
+            lineNumber: 68,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/PomodoroTimer.js",
+        lineNumber: 67,
+        columnNumber: 5
+    }, this);
+}
+_c1 = App;
+exports.default = App;
+var _c, _c1;
+$RefreshReg$(_c, "PomodoroTimer");
+$RefreshReg$(_c1, "App");
+
+  $parcel$ReactRefreshHelpers$b7f8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/PomodoroTimer.css":"e00uh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"e00uh":[function() {},{}],"8E7YH":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$61db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$61db.prelude(module);
+
+try {
+// src/FlowtimeTimer.js
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _flowTimerCss = require("../styles/FlowTimer.css");
+var _s = $RefreshSig$();
+const FlowtimeTimer = ()=>{
+    _s();
+    // Timer state
+    const [minutes, setMinutes] = (0, _react.useState)(0); // Start with 0 minutes
+    const [seconds, setSeconds] = (0, _react.useState)(0); // Start with 0 seconds
+    const [isRunning, setIsRunning] = (0, _react.useState)(false); // Timer state (running or paused)
+    const [workDuration, setWorkDuration] = (0, _react.useState)(90); // Default work session is 90 minutes
+    const [breakDuration, setBreakDuration] = (0, _react.useState)(15); // Default break duration is 15 minutes
+    const [isBreak, setIsBreak] = (0, _react.useState)(false); // Whether the timer is in work or break mode
+    // Effect hook to handle the timer countdown
+    (0, _react.useEffect)(()=>{
+        let interval;
+        if (isRunning) interval = setInterval(()=>{
+            if (seconds === 0) {
+                if (minutes === 0) {
+                    // Timer ends, switch to break mode
+                    setIsBreak(!isBreak);
+                    setMinutes(isBreak ? workDuration : breakDuration); // Switch between work and break durations
+                    setSeconds(0);
+                } else {
+                    setMinutes(minutes - 1);
+                    setSeconds(59);
+                }
+            } else setSeconds(seconds - 1);
+        }, 1000); // Timer updates every second
+        else clearInterval(interval);
+        return ()=>clearInterval(interval); // Cleanup interval on unmount
+    }, [
+        isRunning,
+        minutes,
+        seconds,
+        isBreak,
+        workDuration,
+        breakDuration
+    ]); // Re-run when the timer state changes
+    // Start or pause the timer
+    const toggleTimer = ()=>{
+        setIsRunning(!isRunning);
+    };
+    // Reset the timer
+    const resetTimer = ()=>{
+        setIsRunning(false);
+        setMinutes(workDuration); // Reset to work duration
+        setSeconds(0);
+        setIsBreak(false); // Reset to work session
+    };
+    // Change work duration
+    const changeWorkDuration = (e)=>{
+        const newDuration = parseInt(e.target.value, 10);
+        if (newDuration > 0) {
+            setWorkDuration(newDuration);
+            if (!isRunning) setMinutes(newDuration);
+        }
+    };
+    // Change break duration
+    const changeBreakDuration = (e)=>{
+        const newDuration = parseInt(e.target.value, 10);
+        if (newDuration > 0) setBreakDuration(newDuration);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "timer",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: isBreak ? 'Take a Break!' : 'Work Time!'
+            }, void 0, false, {
+                fileName: "src/components/FlowtimeTimer.js",
+                lineNumber: 76,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "time",
+                children: [
+                    String(minutes).padStart(2, '0'),
+                    ":",
+                    String(seconds).padStart(2, '0')
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FlowtimeTimer.js",
+                lineNumber: 77,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: toggleTimer,
+                        children: isRunning ? 'Pause' : 'Start'
+                    }, void 0, false, {
+                        fileName: "src/components/FlowtimeTimer.js",
+                        lineNumber: 81,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: resetTimer,
+                        children: "Reset"
+                    }, void 0, false, {
+                        fileName: "src/components/FlowtimeTimer.js",
+                        lineNumber: 84,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FlowtimeTimer.js",
+                lineNumber: 80,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "settings",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        children: [
+                            "Work Duration (minutes):",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "number",
+                                value: workDuration,
+                                onChange: changeWorkDuration,
+                                min: "1"
+                            }, void 0, false, {
+                                fileName: "src/components/FlowtimeTimer.js",
+                                lineNumber: 90,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/FlowtimeTimer.js",
+                        lineNumber: 88,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        children: [
+                            "Break Duration (minutes):",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "number",
+                                value: breakDuration,
+                                onChange: changeBreakDuration,
+                                min: "1"
+                            }, void 0, false, {
+                                fileName: "src/components/FlowtimeTimer.js",
+                                lineNumber: 99,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/FlowtimeTimer.js",
+                        lineNumber: 97,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FlowtimeTimer.js",
+                lineNumber: 87,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/FlowtimeTimer.js",
+        lineNumber: 75,
+        columnNumber: 5
+    }, undefined);
+};
+_s(FlowtimeTimer, "3D0fdmwGlfvXAL5lrZgrhAzsbLQ=");
+_c = FlowtimeTimer;
+exports.default = FlowtimeTimer;
+var _c;
+$RefreshReg$(_c, "FlowtimeTimer");
+
+  $parcel$ReactRefreshHelpers$61db.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/FlowTimer.css":"d7yBP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"d7yBP":[function() {},{}],"FjUtl":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$d090 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d090.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+function TaskManager() {
+    _s();
+    const [tasks, setTasks] = (0, _react.useState)([]); // State to store tasks
+    const [newTask, setNewTask] = (0, _react.useState)(''); // State to manage new task input
+    const handleAddTask = ()=>{
+        if (newTask.trim()) {
+            setTasks([
+                ...tasks,
+                newTask
+            ]);
+            setNewTask(''); // Clear the input field
+        }
+    };
+    const handleDeleteTask = (taskToDelete)=>{
+        setTasks(tasks.filter((task)=>task !== taskToDelete));
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "task-manager",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Task Manager"
+            }, void 0, false, {
+                fileName: "src/components/TaskManager.js",
+                lineNumber: 20,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                value: newTask,
+                onChange: (e)=>setNewTask(e.target.value),
+                placeholder: "Enter a new task"
+            }, void 0, false, {
+                fileName: "src/components/TaskManager.js",
+                lineNumber: 21,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: handleAddTask,
+                children: "Add Task"
+            }, void 0, false, {
+                fileName: "src/components/TaskManager.js",
+                lineNumber: 27,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                children: tasks.map((task, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: [
+                            task,
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>handleDeleteTask(task),
+                                children: "Delete"
+                            }, void 0, false, {
+                                fileName: "src/components/TaskManager.js",
+                                lineNumber: 31,
+                                columnNumber: 20
+                            }, this)
+                        ]
+                    }, index, true, {
+                        fileName: "src/components/TaskManager.js",
+                        lineNumber: 30,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "src/components/TaskManager.js",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/TaskManager.js",
+        lineNumber: 19,
+        columnNumber: 5
+    }, this);
+}
+_s(TaskManager, "MMRu7H+sKP7rEuK8M8zT6HaT89w=");
+_c = TaskManager;
+exports.default = TaskManager;
+var _c;
+$RefreshReg$(_c, "TaskManager");
+
+  $parcel$ReactRefreshHelpers$d090.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["aQL8O","9mu7C","8lqZg"], "8lqZg", "parcelRequire94c2")
 
 //# sourceMappingURL=index.975ef6c8.js.map

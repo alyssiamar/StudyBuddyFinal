@@ -16,7 +16,7 @@
 
 .sidebar a {
   color: #2f4f4f;
-  padding: 30px;
+  padding: 20px;
   font-family: Caveat Brush, static;
   font-size: 45px;
   text-decoration: none;
@@ -24,8 +24,155 @@
 }
 
 .sidebar a:hover {
-  color: #2a9d8f;
+  color: #2f776d;
   text-decoration: underline;
+}
+
+.study-room-page {
+  text-align: left;
+  margin-left: -50px;
+  padding: 2rem;
+  font-family: Caveat Brush, cursive;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-family: Caveat Brush, cursive;
+  font-size: 2.9rem;
+}
+
+.widgets {
+  justify-content: left;
+  gap: 1rem;
+  padding-bottom: 50px;
+}
+
+.widgets li {
+  padding-top: 20px;
+  list-style-type: none;
+}
+
+.widgets a {
+  color: #333;
+  border-bottom: 2px solid #0000;
+  font-size: 2.1rem;
+  text-decoration: none;
+  transition: color .3s, border-bottom-color .3s;
+}
+
+.widgets a:hover {
+  color: #555;
+  border-bottom-color: #555;
+}
+
+.widgets a:focus {
+  color: #333;
+  border-bottom-color: #333;
+  outline: none;
+}
+
+.description {
+  color: #333;
+  margin-top: .25rem;
+  font-size: 1.5rem;
+}
+
+.todo-list-main {
+  width: 50%;
+  height: 400px;
+  position: 560px;
+  margin-top: 20px;
+}
+
+.right-aligned-todo {
+  border-radius: 8px;
+  width: 20%;
+  height: 31%;
+  margin-top: 350px;
+  margin-left: -500px;
+  padding: .5rem;
+  position: absolute;
+}
+
+.right-aligned-todo h2 {
+  margin-bottom: .2rem;
+  font-size: .5rem;
+}
+
+.right-aligned-todo input[type="text"] {
+  width: 100%;
+  padding: .25rem;
+  font-size: .8rem;
+}
+
+.right-aligned-todo input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  font-family: Caveat Brush, cursive;
+}
+
+.right-aligned-todo .task-row {
+  margin-bottom: .5rem;
+}
+
+.right-aligned-todo .todo-list-content ul {
+  padding-left: 0;
+}
+
+.notepad {
+  text-align: center;
+  border: 3px solid #000;
+  width: 100%;
+  height: 150%;
+  margin-left: -30px;
+  padding: 10px;
+  box-shadow: 0 8px 15px #0003;
+  border-radius: 12px !important;
+}
+
+.notepad h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-family: Caveat Brush, cursive;
+  font-size: 3rem;
+}
+
+.todo-list-content {
+  margin-top: 20px;
+}
+
+.task-row {
+  height: 1.2rem;
+  margin-bottom: 30px;
+  margin-right: 25px;
+  display: flex;
+}
+
+.checkbox {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.task-input {
+  text-align: left;
+  background-color: #fff0;
+  border: 10px;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  width: 90%;
+  font-family: Caveat Brush, cursive;
+  font-size: 1.3rem;
+}
+
+.task-input.checked {
+  text-decoration: line-through;
+}
+
+.task-input:focus {
+  border-bottom: 2px solid #000;
 }
 
 .app-container {
@@ -73,63 +220,123 @@ body, html {
   overflow: hidden;
 }
 
-.todo-list-container {
-  position: 500px;
-  align-items: center;
-  margin-top: 30px;
+.timer {
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -40px;
+  padding: 1rem;
   display: flex;
 }
 
-.notepad {
-  text-align: center;
-  border: 3px solid #000;
-  border-radius: 12px;
-  width: 400px;
-  height: 600px;
-  padding: 20px;
-  box-shadow: 0 8px 15px #0003;
-}
-
-.notepad h2 {
-  color: #333;
-  margin-bottom: 15px;
+.timer h1 {
+  color: #2d5e49;
+  margin-bottom: 4rem;
+  margin-left: 40px;
   font-family: Caveat Brush, cursive;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
-.todo-list-content {
-  margin-top: 20px;
+.time {
+  color: #1d3e30;
+  margin-bottom: 1rem;
+  font-family: Caveat Brush, cursive;
+  font-size: 18rem;
+  font-weight: bold;
 }
 
-.task-row {
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 12px;
+.button-container {
+  gap: 1rem;
+  margin-left: 60px;
   display: flex;
 }
 
-.checkbox {
+button {
+  color: #000;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-.task-input {
-  text-align: left;
-  background-color: #fff0;
+  background-color: #0000;
   border: none;
-  border-bottom: 2px solid #ccc;
   outline: none;
-  width: 90%;
-  font-size: 1.1rem;
+  margin: .5rem;
+  padding: .7rem 5rem;
+  font-family: Caveat Brush, cursive;
+  font-size: 1.9rem;
 }
 
-.task-input.checked {
-  text-decoration: line-through;
+button:hover {
+  text-decoration: underline;
 }
 
-.task-input:focus {
-  border-bottom: 2px solid #000;
+button:active {
+  transform: scale(.98);
+}
+
+.timer {
+  color: #333;
+  padding: 2rem;
+  font-family: Caveat Brush, cursive;
+}
+
+.time {
+  margin: -50px 0 1rem;
+  font-family: Caveat Brush, cursive;
+  font-size: 15rem;
+}
+
+.timer button {
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  border-bottom: 2px solid #333;
+  margin: .5rem;
+  padding: .5rem 1rem;
+  font-family: Caveat Brush, cursive;
+  font-size: 1.5rem;
+}
+
+.timer button:hover {
+  color: #555;
+  border-bottom: 2px solid #555;
+}
+
+.settings {
+  gap: 10rem;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.settings label {
+  color: #333;
+  flex-direction: column;
+  align-items: center;
+  font-family: Caveat Brush, cursive;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+.settings input {
+  text-align: center;
+  background-color: #0000;
+  border: none;
+  border-bottom: 2px solid #777;
+  width: 4rem;
+  padding: .3rem;
+  font-family: Caveat Brush, cursive;
+  font-size: 1.5rem;
+}
+
+.settings input:focus {
+  border-bottom: 2px solid #333;
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /*# sourceMappingURL=index.2212206d.css.map */

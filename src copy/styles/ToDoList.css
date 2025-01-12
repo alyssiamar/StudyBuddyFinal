@@ -1,26 +1,78 @@
-.todo-list-container {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    margin-top: 30px;
+.todo-list-main {
+    /* display: flex; */
+    width: 50%;
+    height: 400px;
+    /* align-items: center; */
+    margin-top: 20px;
+    position: 560px; /* Adjust this value to move further left */
 
-    position: 500px; /* Adjust this value to move further left */
+  }
+
+  .right-aligned-todo {
+    position: absolute;  /* Allow positioning relative to the nearest positioned ancestor */
+    /* bottom: 2rem;        
+    left: 2rem;           */
+    width: 20%;
+    height: 31%;
+    padding: 0.5rem;     /* Smaller padding */
+    border-radius: 8px;  /* Rounded corners */
+    margin-left: -500px;
+    margin-top: 350px;
 
   }
   
+  /* Reduce the font size for the heading */
+  .right-aligned-todo h2 {
+    font-size: 0.5rem;  /* Smaller heading */
+    margin-bottom: 0.2rem;
+  }
+  
+  /* Reduce the size of the input fields */
+  .right-aligned-todo input[type="text"] {
+    font-size: 0.8rem;   /* Smaller text input */
+    padding: 0.25rem;    /* Less padding inside the input box */
+    width: 100%;       
+  }
+  
+  /* Reduce the size of the checkboxes */
+  .right-aligned-todo input[type="checkbox"] {
+    font-family: 'Caveat Brush', cursive;
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Reduce the spacing between list items */
+  .right-aligned-todo .task-row {
+    margin-bottom: 0.5rem; /* Less margin between tasks */
+  }
+  
+  /* Make the overall To-Do list content smaller */
+  .right-aligned-todo .todo-list-content ul {
+    padding-left: 0;  /* Remove any default padding */
+  }
+  
+
+
+  
   .notepad {
-    width: 400px; /* Match your image width */
-    height: 600px; /* Match your image height */
-    padding: 20px;
+    width: 100%; /* Match your image width */
+    height: 150%; /* Match your image height */
+    padding: 10px;
     border: 3px solid #000; /* Border around the notepad */
-    border-radius: 12px; /* Rounded edges */
+    border-radius: 12px !important;; /* Rounded edges */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+    /* position: relative;  
+    left: -30px; */
+    margin-left: -30px;
+
   }
+
+  
   
   .notepad h2 {
     font-family: 'Caveat Brush', cursive;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #333;
     margin-bottom: 15px;
   }
@@ -31,9 +83,9 @@
   
   .task-row {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 12px; /* Space between lines */
+    margin-bottom: 30px; /* Space between lines */
+    margin-right: 25px;
+    height: 1.2rem;
   }
   
   .checkbox {
@@ -45,9 +97,10 @@
   
   .task-input {
     width: 90%;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    font-size: 1.1rem;
+    font-family: 'Caveat Brush', cursive;
+    border: 10px;
+    border-bottom: 2px solid #ffffff;
+    font-size: 1.3rem;
     background-color: rgba(255, 255, 255, 0); /* Transparent input to blend with background */
     outline: none;
     text-align: left;

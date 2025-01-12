@@ -33,7 +33,7 @@ body {
   .homepage-container {
     height: 100vh; /* Make it cover the full viewport height */
     width: 100vw; /* Make it cover the full viewport width */
-    background-image: url("./assets/bg.png"); /* Path to the image */
+    background-image: url("./assets/bg4.png"); /* Path to the image */
     background-size: cover; /* Ensure it stretches to cover the full screen */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */

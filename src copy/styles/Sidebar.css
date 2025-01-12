@@ -22,11 +22,11 @@
     font-size: 45px; /* Custom font size */
     font-family: 'Caveat Brush', static; /* Custom font family */
     display: inline-block;
-    padding: 30px;
+    padding: 20px;
   }
   
   .sidebar a:hover {
     text-decoration: underline; /* Add underline on hover */
-    color: #2a9d8f; /* Change text color on hover */
+    color: #2f776d; /* Change text color on hover */
   }
   

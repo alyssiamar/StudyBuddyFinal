@@ -1,0 +1,56 @@
+/* Style the entire page */
+.study-room-page {
+    padding: 2rem;
+    font-family: 'Caveat Brush', cursive; /* Custom font for the whole page */
+    text-align: left;
+    margin-left: -50px;
+  }
+  
+  /* Style the main heading */
+  h1 {
+    font-family: 'Caveat Brush', cursive; /* Custom font for heading */
+    font-size: 2.9rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  /* Style the list of widgets (Pomodoro, FlowTime, Interleaving) */
+  .widgets {
+    /* display: flex; */
+    justify-content: left; /* Center align the list */
+    gap: 1rem; /* Space between links */
+    padding-bottom: 50px;
+  }
+  
+  .widgets li {
+    list-style-type: none;
+    padding-top: 20px;
+  }
+  
+  .widgets a {
+    text-decoration: none;
+    font-size: 2.1rem;
+    color: #333; /* Text color */
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+  }
+  
+  /* Hover effect for the links */
+  .widgets a:hover {
+    color: #555;
+    border-bottom-color: #555; /* Underline effect */
+  }
+  
+  /* Additional styling for links */
+  .widgets a:focus {
+    outline: none;
+    color: #333;
+    border-bottom-color: #333;
+  }
+  /* Description text styling */
+.description {
+    font-size: 1.5rem; /* Smaller text size */
+    color: #333; 
+    margin-top: 0.25rem;
+  }
+  
